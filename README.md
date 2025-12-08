@@ -2,15 +2,15 @@
 
 **Comprehensive toy implementations of the 30 foundational papers recommended by Ilya Sutskever**
 
-[![Implementations](https://img.shields.io/badge/Implementations-22%2F30-brightgreen)](https://github.com/pageman/sutskever-30-implementations)
-[![Coverage](https://img.shields.io/badge/Coverage-73%25-blue)](https://github.com/pageman/sutskever-30-implementations)
+[![Implementations](https://img.shields.io/badge/Implementations-23%2F30-brightgreen)](https://github.com/pageman/sutskever-30-implementations)
+[![Coverage](https://img.shields.io/badge/Coverage-77%25-blue)](https://github.com/pageman/sutskever-30-implementations)
 [![Python](https://img.shields.io/badge/Python-NumPy%20Only-yellow)](https://numpy.org/)
 
 ## Overview
 
 This repository contains detailed, educational implementations of the papers from Ilya Sutskever's famous reading list - the collection he told John Carmack would teach you "90% of what matters" in deep learning.
 
-**Progress: 22/30 papers (73%) implemented!**
+**Progress: 23/30 papers (77%) implemented!**
 
 Each implementation:
 - ✅ Uses only NumPy (no deep learning frameworks) for educational clarity
@@ -65,7 +65,7 @@ jupyter notebook 02_char_rnn_karpathy.ipynb
 |---|-------|----------|--------------|
 | 16 | Relational Reasoning | ✅ `16_relational_reasoning.ipynb` | Relation networks, Pairwise functions |
 | 17 | **Variational Lossy Autoencoder** | ✅ `17_variational_autoencoder.ipynb` | VAE, ELBO, Reparameterization trick |
-| 18 | Relational RNNs | [Planned] | Relational memory, Self-attention in RNN |
+| 18 | **Relational RNNs** | ✅ `18_relational_rnn.ipynb` | Relational memory, Multi-head self-attention, 3.7% better than LSTM |
 | 19 | The Coffee Automaton | ✅ `01_complexity_dynamics.ipynb` | Irreversibility, Mixing, Complexity |
 | 20 | **Neural Turing Machines** | ✅ `20_neural_turing_machine.ipynb` | External memory, Differentiable addressing |
 | 21 | Deep Speech 2 (CTC) | ✅ `21_ctc_speech.ipynb` | CTC loss, Speech recognition |
@@ -161,51 +161,57 @@ These implementations cover the most influential papers and demonstrate core dee
     - Visual QA
     - Permutation invariance
 
-14. **`20_neural_turing_machine.ipynb`** - Memory-Augmented Networks
+14. **`18_relational_rnn.ipynb`** - Relational RNN
+    - LSTM with relational memory
+    - Multi-head self-attention across memory slots
+    - 3.7% improvement over LSTM baseline
+    - Sequential reasoning tasks
+
+15. **`20_neural_turing_machine.ipynb`** - Memory-Augmented Networks
     - Content & location addressing
     - Differentiable read/write
     - External memory
 
-15. **`21_ctc_speech.ipynb`** - CTC Loss & Speech Recognition
+16. **`21_ctc_speech.ipynb`** - CTC Loss & Speech Recognition
     - Connectionist Temporal Classification
     - Alignment-free training
     - Forward algorithm
 
 #### Generative Models
-16. **`17_variational_autoencoder.ipynb`** - VAE
+17. **`17_variational_autoencoder.ipynb`** - VAE
     - Generative modeling
     - ELBO loss
     - Latent space visualization
 
 #### Modern Applications
-17. **`27_multi_token_prediction.ipynb`** - Multi-Token Prediction
+18. **`27_multi_token_prediction.ipynb`** - Multi-Token Prediction
     - Predict multiple future tokens
     - 2-3x sample efficiency
     - Speculative decoding
     - Faster training & inference
 
-18. **`28_dense_passage_retrieval.ipynb`** - Dense Retrieval
+19. **`28_dense_passage_retrieval.ipynb`** - Dense Retrieval
     - Dual encoder architecture
     - In-batch negatives
     - Semantic search
 
-19. **`29_rag.ipynb`** - Retrieval-Augmented Generation
+20. **`29_rag.ipynb`** - Retrieval-Augmented Generation
     - RAG-Sequence vs RAG-Token
     - Combining retrieval + generation
     - Knowledge-grounded outputs
 
-20. **`30_lost_in_middle.ipynb`** - Long Context Analysis
+21. **`30_lost_in_middle.ipynb`** - Long Context Analysis
     - Position bias in LLMs
     - U-shaped performance curve
     - Document ordering strategies
 
 #### Scaling & Theory
-21. **`22_scaling_laws.ipynb`** - Scaling Laws
+22. **`22_scaling_laws.ipynb`** - Scaling Laws
     - Power law relationships
     - Compute-optimal training
     - Performance prediction
 
-22. **`01_complexity_dynamics.ipynb`** - Complexity & Entropy
+23. **`01_complexity_dynamics.ipynb`** - Complexity & Entropy
     - Cellular automata (Rule 30)
     - Entropy growth
     - Irreversibility
@@ -233,6 +239,7 @@ sutskever-30-implementations/
 ├── 15_identity_mappings_resnet.ipynb   # Pre-activation ResNet
 ├── 16_relational_reasoning.ipynb       # Relation networks
 ├── 17_variational_autoencoder.ipynb   # VAE
+├── 18_relational_rnn.ipynb             # Relational RNN
 ├── 20_neural_turing_machine.ipynb     # External memory
 ├── 21_ctc_speech.ipynb                # CTC loss
 ├── 22_scaling_laws.ipynb              # Empirical scaling
@@ -242,7 +249,7 @@ sutskever-30-implementations/
 └── 30_lost_in_middle.ipynb            # Long context analysis
 ```
 
-**22 out of 30 papers implemented! (73% complete)**
+**23 out of 30 papers implemented! (77% complete)**
 
 ## Learning Path
 
@@ -392,7 +399,7 @@ Educational use. See individual papers for original research citations.
 
 ## Latest Additions (December 2025)
 
-### Recently Implemented (13 new papers!)
+### Recently Implemented (14 new papers!)
 - ✅ **Paper 4**: RNN Regularization (variational dropout)
 - ✅ **Paper 5**: Neural Network Pruning (MDL, 90%+ sparsity)
 - ✅ **Paper 7**: AlexNet (CNNs from scratch)
@@ -400,6 +407,7 @@ Educational use. See individual papers for original research citations.
 - ✅ **Paper 12**: Graph Neural Networks (message passing)
 - ✅ **Paper 14**: Bahdanau Attention (original attention)
 - ✅ **Paper 15**: Identity Mappings ResNet (pre-activation)
+- ✅ **Paper 18**: Relational RNNs (relational memory, 3.7% improvement) **NEW!**
 - ✅ **Paper 16**: Relational Reasoning (relation networks)
 - ✅ **Paper 21**: Deep Speech 2 (CTC loss)
 - ✅ **Paper 27**: Multi-Token Prediction (2-3x sample efficiency)
