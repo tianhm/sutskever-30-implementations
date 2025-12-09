@@ -65,7 +65,7 @@ jupyter notebook 02_char_rnn_karpathy.ipynb
 |---|-------|----------|--------------|
 | 16 | Relational Reasoning | ✅ `16_relational_reasoning.ipynb` | Relation networks, Pairwise functions |
 | 17 | **Variational Lossy Autoencoder** | ✅ `17_variational_autoencoder.ipynb` | VAE, ELBO, Reparameterization trick |
-| 18 | **Relational RNNs** | ✅ `18_relational_rnn.ipynb` | Relational memory, Multi-head self-attention in RNNs, Forward pass demo |
+| 18 | **Relational RNNs** | ✅ `18_relational_rnn.ipynb` | Relational memory, Multi-head self-attention, Manual backprop (~1100 lines) |
 | 19 | The Coffee Automaton | ✅ `01_complexity_dynamics.ipynb` | Irreversibility, Mixing, Complexity |
 | 20 | **Neural Turing Machines** | ✅ `20_neural_turing_machine.ipynb` | External memory, Differentiable addressing |
 | 21 | Deep Speech 2 (CTC) | ✅ `21_ctc_speech.ipynb` | CTC loss, Speech recognition |
@@ -166,7 +166,9 @@ These implementations cover the most influential papers and demonstrate core dee
     - Multi-head self-attention across memory slots
     - Architecture demonstration (forward pass)
     - Sequential reasoning tasks
-    - Note: Full training requires PyTorch/TensorFlow
+    - **Section 11: Manual backpropagation implementation (~1100 lines)**
+    - Complete gradient computation for all components
+    - Gradient checking with numerical verification
 
 15. **`20_neural_turing_machine.ipynb`** - Memory-Augmented Networks
     - Content & location addressing
@@ -408,7 +410,7 @@ Educational use. See individual papers for original research citations.
 - ✅ **Paper 12**: Graph Neural Networks (message passing)
 - ✅ **Paper 14**: Bahdanau Attention (original attention)
 - ✅ **Paper 15**: Identity Mappings ResNet (pre-activation)
-- ✅ **Paper 18**: Relational RNNs (relational memory, architecture demo)
+- ✅ **Paper 18**: Relational RNNs (relational memory + Section 11: manual backprop ~1100 lines)
 - ✅ **Paper 16**: Relational Reasoning (relation networks)
 - ✅ **Paper 21**: Deep Speech 2 (CTC loss)
 - ✅ **Paper 27**: Multi-Token Prediction (2-3x sample efficiency)
