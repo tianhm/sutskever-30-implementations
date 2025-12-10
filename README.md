@@ -2,15 +2,15 @@
 
 **Comprehensive toy implementations of the 30 foundational papers recommended by Ilya Sutskever**
 
-[![Implementations](https://img.shields.io/badge/Implementations-28%2F30-brightgreen)](https://github.com/pageman/sutskever-30-implementations)
-[![Coverage](https://img.shields.io/badge/Coverage-93%25-blue)](https://github.com/pageman/sutskever-30-implementations)
+[![Implementations](https://img.shields.io/badge/Implementations-29%2F30-brightgreen)](https://github.com/pageman/sutskever-30-implementations)
+[![Coverage](https://img.shields.io/badge/Coverage-97%25-blue)](https://github.com/pageman/sutskever-30-implementations)
 [![Python](https://img.shields.io/badge/Python-NumPy%20Only-yellow)](https://numpy.org/)
 
 ## Overview
 
 This repository contains detailed, educational implementations of the papers from Ilya Sutskever's famous reading list - the collection he told John Carmack would teach you "90% of what matters" in deep learning.
 
-**Progress: 28/30 papers (93%) implemented!**
+**Progress: 29/30 papers (97%) implemented!**
 
 Each implementation:
 - ✅ Uses only NumPy (no deep learning frameworks) for educational clarity
@@ -78,7 +78,7 @@ jupyter notebook 02_char_rnn_karpathy.ipynb
 | 23 | MDL Principle | ✅ `23_mdl_principle.ipynb` | Information theory, Model selection, Compression |
 | 24 | Machine Super Intelligence | N/A (Theoretical) | AGI, Intelligence metrics |
 | 25 | Kolmogorov Complexity | ✅ `25_kolmogorov_complexity.ipynb` | Compression, Algorithmic randomness, Universal prior |
-| 26 | CS231n | N/A (Course) | CNNs, Computer vision |
+| 26 | **CS231n: CNNs for Visual Recognition** | ✅ `26_cs231n_cnn_fundamentals.ipynb` | Image classification pipeline, kNN/Linear/NN/CNN, Backprop, Optimization, Babysitting neural nets |
 | 27 | Multi-token Prediction | ✅ `27_multi_token_prediction.ipynb` | Multiple future tokens, Sample efficiency, 2-3x faster |
 | 28 | Dense Passage Retrieval | ✅ `28_dense_passage_retrieval.ipynb` | Dual encoders, MIPS, In-batch negatives |
 | 29 | Retrieval-Augmented Generation | ✅ `29_rag.ipynb` | RAG-Sequence, RAG-Token, Knowledge retrieval |
@@ -264,6 +264,20 @@ These implementations cover the most influential papers and demonstrate core dee
     - Arrow of time: fundamental vs emergent
     - **10 comprehensive sections exploring irreversibility across all scales**
 
+29. **`26_cs231n_cnn_fundamentals.ipynb`** - CS231n: Vision from First Principles
+    - **Complete vision pipeline in pure NumPy**
+    - k-Nearest Neighbors baseline
+    - Linear classifiers (SVM and Softmax)
+    - Optimization (SGD, Momentum, Adam, learning rate schedules)
+    - 2-layer neural networks with backpropagation
+    - Convolutional layers (conv, pool, ReLU)
+    - Complete CNN architecture (Mini-AlexNet)
+    - Visualization techniques (filters, saliency maps)
+    - Transfer learning principles
+    - Babysitting tips (sanity checks, hyperparameter tuning, monitoring)
+    - **10 sections covering entire CS231n curriculum**
+    - Ties together Papers #7 (AlexNet), #10 (ResNet), #11 (Dilated Conv)
+
 ## Repository Structure
 
 ```
@@ -296,13 +310,14 @@ sutskever-30-implementations/
 ├── 22_scaling_laws.ipynb              # Empirical scaling
 ├── 23_mdl_principle.ipynb             # MDL & compression
 ├── 25_kolmogorov_complexity.ipynb     # K(x) & randomness
+├── 26_cs231n_cnn_fundamentals.ipynb    # Vision from first principles
 ├── 27_multi_token_prediction.ipynb     # Multi-token prediction
 ├── 28_dense_passage_retrieval.ipynb    # Dense retrieval
 ├── 29_rag.ipynb                       # RAG architecture
 └── 30_lost_in_middle.ipynb            # Long context analysis
 ```
 
-**28 out of 30 papers implemented! (93% complete)**
+**29 out of 30 papers implemented! (97% complete)**
 
 ## Learning Path
 
@@ -318,26 +333,27 @@ sutskever-30-implementations/
 7. **Bahdanau Attention** (`14_bahdanau_attention.ipynb`) - Attention basics
 8. **Pointer Networks** (`06_pointer_networks.ipynb`) - Attention as selection
 9. **Seq2Seq for Sets** (`08_seq2seq_for_sets.ipynb`) - Permutation invariance
-10. **GPipe** (`09_gpipe.ipynb`) - Pipeline parallelism for large models
-11. **Transformers** (`13_attention_is_all_you_need.ipynb`) - Modern architecture
-12. **Dilated Convolutions** (`11_dilated_convolutions.ipynb`) - Receptive fields
-13. **Scaling Laws** (`22_scaling_laws.ipynb`) - Understanding scale
+10. **CS231n** (`26_cs231n_cnn_fundamentals.ipynb`) - Complete vision pipeline (kNN → CNNs)
+11. **GPipe** (`09_gpipe.ipynb`) - Pipeline parallelism for large models
+12. **Transformers** (`13_attention_is_all_you_need.ipynb`) - Modern architecture
+13. **Dilated Convolutions** (`11_dilated_convolutions.ipynb`) - Receptive fields
+14. **Scaling Laws** (`22_scaling_laws.ipynb`) - Understanding scale
 
 ### Advanced Track
-14. **Pre-activation ResNet** (`15_identity_mappings_resnet.ipynb`) - Architecture details
-15. **Graph Neural Networks** (`12_graph_neural_networks.ipynb`) - Graph learning
-16. **Relation Networks** (`16_relational_reasoning.ipynb`) - Relational reasoning
-17. **Neural Turing Machines** (`20_neural_turing_machine.ipynb`) - External memory
-18. **CTC Loss** (`21_ctc_speech.ipynb`) - Speech recognition
-19. **Dense Retrieval** (`28_dense_passage_retrieval.ipynb`) - Semantic search
-20. **RAG** (`29_rag.ipynb`) - Retrieval-augmented generation
-21. **Lost in the Middle** (`30_lost_in_middle.ipynb`) - Long context analysis
+15. **Pre-activation ResNet** (`15_identity_mappings_resnet.ipynb`) - Architecture details
+16. **Graph Neural Networks** (`12_graph_neural_networks.ipynb`) - Graph learning
+17. **Relation Networks** (`16_relational_reasoning.ipynb`) - Relational reasoning
+18. **Neural Turing Machines** (`20_neural_turing_machine.ipynb`) - External memory
+19. **CTC Loss** (`21_ctc_speech.ipynb`) - Speech recognition
+20. **Dense Retrieval** (`28_dense_passage_retrieval.ipynb`) - Semantic search
+21. **RAG** (`29_rag.ipynb`) - Retrieval-augmented generation
+22. **Lost in the Middle** (`30_lost_in_middle.ipynb`) - Long context analysis
 
 ### Theory & Fundamentals
-22. **MDL Principle** (`23_mdl_principle.ipynb`) - Model selection via compression
-23. **Kolmogorov Complexity** (`25_kolmogorov_complexity.ipynb`) - Randomness & information
-24. **Complexity Dynamics** (`01_complexity_dynamics.ipynb`) - Entropy & emergence
-25. **Coffee Automaton** (`19_coffee_automaton.ipynb`) - Deep dive into irreversibility
+23. **MDL Principle** (`23_mdl_principle.ipynb`) - Model selection via compression
+24. **Kolmogorov Complexity** (`25_kolmogorov_complexity.ipynb`) - Randomness & information
+25. **Complexity Dynamics** (`01_complexity_dynamics.ipynb`) - Entropy & emergence
+26. **Coffee Automaton** (`19_coffee_automaton.ipynb`) - Deep dive into irreversibility
 
 ## Key Insights from the Sutskever 30
 
@@ -457,13 +473,14 @@ Educational use. See individual papers for original research citations.
 
 ## Latest Additions (December 2025)
 
-### Recently Implemented (19 new papers!)
+### Recently Implemented (20 new papers!)
 - ✅ **Paper 4**: RNN Regularization (variational dropout)
 - ✅ **Paper 5**: Neural Network Pruning (MDL, 90%+ sparsity)
 - ✅ **Paper 7**: AlexNet (CNNs from scratch)
 - ✅ **Paper 8**: Seq2Seq for Sets (permutation invariance, attention pooling)
 - ✅ **Paper 9**: GPipe (pipeline parallelism, micro-batching, re-materialization)
 - ✅ **Paper 19**: The Coffee Automaton (deep dive into irreversibility, entropy, Landauer's principle)
+- ✅ **Paper 26**: CS231n (complete vision pipeline: kNN → CNN, all in NumPy)
 - ✅ **Paper 11**: Dilated Convolutions (multi-scale)
 - ✅ **Paper 12**: Graph Neural Networks (message passing)
 - ✅ **Paper 14**: Bahdanau Attention (original attention)
